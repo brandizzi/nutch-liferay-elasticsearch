@@ -21,6 +21,10 @@
 
 <configuration>
  <property>
+  <name>http.agent.name</name>
+  <value>Liferay Crawler</value>
+ </property>
+ <property>
   <name>storage.data.store.class</name>
   <value>org.apache.gora.hbase.store.HBaseStore</value>
   <description>Default class for storing data</description>
