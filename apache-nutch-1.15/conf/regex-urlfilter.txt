@@ -33,9 +33,10 @@
 # skip image and other suffixes we can't yet parse
 # for a more extensive coverage use the urlfilter-suffix plugin
 -(?i)\.(gif|jpg|png|ico|css|sit|eps|wmf|zip|ppt|mpg|xls|gz|rpm|tgz|mov|exe|jpeg|bmp|js)$
+-(?i)\.(gif|jpg|png|ico|css|sit|eps|wmf|zip|ppt|mpg|xls|gz|rpm|tgz|mov|exe|jpeg|bmp|js)\?.*
 
 # skip URLs containing certain characters as probable queries, etc.
--[?*!@=]
+#-[?*!@=]
 
 # skip URLs with slash-delimited segment that repeats 3+ times, to break loops
 -.*(/[^/]+)/[^/]+\1/[^/]+\1/
@@ -64,4 +65,7 @@
 # accept anything else
 #+.
 
+-^http://example\.com:8080/o
+-^http://example\.com:8080/combo
+-^http://example\.com:8080/image
 +^http://example\.com:8080/.*
