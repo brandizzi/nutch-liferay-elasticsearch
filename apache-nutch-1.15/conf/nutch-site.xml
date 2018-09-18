@@ -8,4 +8,12 @@
   <name>http.agent.name</name>
   <value>Live Spider with Rays</value>
  </property>
+ <property>
+  <name>http.verbose</name>
+  <value>true</value>
+ </property>
+ <property>
+  <name>plugin.includes</name>
+  <value>protocol-httpclient|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
+ </property>
 </configuration>

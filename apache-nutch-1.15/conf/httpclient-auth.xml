@@ -107,9 +107,23 @@
  
  More information on HTTP POST can be located at
  https://wiki.apache.org/nutch/HttpPostAuthentication
-
 -->
 
 <auth-configuration>
+ <credentials authMethod="formAuth"
+   loginUrl="http://localhost:8080/web/guest/home?p_p_id=com_liferay_login_web_portlet_LoginPortlet&amp;p_p_lifecycle=0&amp;p_p_state=maximized"
+   loginFormId="_com_liferay_login_web_portlet_LoginPortlet_loginForm"
+   loginRedirect="true">
 
+  <authscope host="example.com" port="8080"/>
+  <loginPostData>
+   <field name="_com_liferay_login_web_portlet_LoginPortlet_login"
+     value="test@liferay.com"/>
+   <field name="_com_liferay_login_web_portlet_LoginPortlet_password"
+     value="test"/>
+  </loginPostData>
+  <loginCookie>
+    <policy>NETSCAPE</policy>
+  </loginCookie>
+ </credentials>
 </auth-configuration>
