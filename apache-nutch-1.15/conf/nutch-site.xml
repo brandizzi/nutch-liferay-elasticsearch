@@ -14,6 +14,22 @@
  </property>
  <property>
   <name>plugin.includes</name>
-  <value>protocol-httpclient|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
+  <value>protocol-httpclient|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)|indexer-elastic</value>
+ </property>
+ <property>
+  <name>elastic.host</name>
+  <value>localhost</value>
+ </property>
+ <property>
+  <name>elastic.port</name>
+  <value>9300</value>
+ </property>
+ <property>
+  <name>elastic.cluster</name>
+  <value>LiferayElasticsearchCluster</value>
+ </property>
+ <property>
+  <name>elastic.index</name>
+  <value>nutchindex</value>
  </property>
 </configuration>
